@@ -1,29 +1,40 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <MainView></MainView>
   </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+  import MainView from './views/Main';
+
+  export default {
+      components: {
+          MainView,
+      }
   }
-}
+</script>
+
+<style lang="less">
+  @import './constants';
+
+  @font-face {
+    font-family: Myriad;
+    src: url(assets/fonts/MyriadPro-Regular.woff);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Myriad, sans-serif;
+  }
+
+  html {
+    font-size: 18px;
+    color: white;
+  }
+
+  body {
+    background-color: @bg;
+  }
 </style>
