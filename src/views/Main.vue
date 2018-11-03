@@ -42,24 +42,58 @@
 
         <section class="page-section js-page-section" id="promo">
             <div class="video-container-wrap">
-                <h1 class="section-subtitle">Обзор игры</h1>
+                <h1 class="section-subtitle">Об игре</h1>
 
-                <div class="game-description">
-                    <p><span class="primary-span">Web Tycoon</span> — бесплатная массовая многопользовательская экономическая стратегия, в которой вам предстоит взять на себя роль вебмастера, окунуться в мир веб-технологий и покорить вершины мировой сети.</p>
-                    <p>Развивайте сайт, используя все время обновляющиеся технологии. Поддерживайте выбранный вами баланс развития всех составляющих сайта, наполняйте его контентом, не забывайте об его продвижени!</p>
-                    <p>Завоевав преимущество - не упускайте его. На прибыль, полученную от созданных сайтов, вы сможете нанять сотрудников, которые будут помогать вам развивать ваш бизнес, или фрилансеров, выполняющих разовые задачи.</p>
+                <div class="game-description-items">
+                    <div class="game-description-item">
+                        <h3 class="description-item-title">
+                            <i class="material-icons">trending_up</i>
+                            Станьте во главе новой индустрии
+                        </h3>
+                        <p class="description-item-description">
+                            Вы начинаете игру на заре новой эпохи, когда веб-индустрия только начинает развиваться. Вы стоите у истоков новых технологий, и впереди длинный путь по развитию своих навыков.
+                        </p>
+                    </div>
+
+                    <div class="game-description-item">
+                        <h3 class="description-item-title">
+                            <i class="material-icons">update</i>
+                            Воссоздайте сайты, которые популярны сейчас
+                        </h3>
+                        <p class="description-item-description">Завоевав преимущество - не упускайте его. На прибыль, полученную от созданных сайтов, вы сможете нанять сотрудников, которые будут помогать вам развивать ваш бизнес, или фрилансеров, выполняющих разовые задачи.</p>
+                    </div>
+
+                    <div class="game-description-item">
+                        <h3 class="description-item-title">
+                            <i class="material-icons">whatshot</i>
+                            Используйте самые новые технологии</h3>
+                        <p class="description-item-description">Развивайте сайт, используя все время обновляющиеся технологии. Гонка технологий не прекращается никогда. Поддерживайте выбранный вами баланс развития всех составляющих сайта, наполняйте его контентом, не забывайте об его продвижени!</p>
+                    </div>
+
+                    <div class="game-description-item">
+                        <h3 class="description-item-title">
+                            <i class="material-icons">person_add</i>
+                            Объединяйтесь и открывайте новые технологии первыми</h3>
+                        <p class="description-item-description">Зарабатывайте на ваших сайтах с помощью продажи рекламных мест, обменивайтесь ссылками, вступайте в кольца сайтов и объединяйтесь в крупные холдинги! Вместе вы станете сильнее, сможете участвовать в конкуренции холдингов, занимать призовые места в регулярных соревнованиях, завоевывая верхние позиции таблицы лучших бизнесменов и сильнейших холдингов. А возможность совместных атак на сайты конкурентов добавит борьбе остроты.</p>
+                    </div>
                 </div>
 
-                <div class="video-container">
-                    <iframe
-                        width="100%"
-                        height="auto"
-                        src="https://www.youtube.com/embed/iDytJAnsbk0"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                    ></iframe>
-                </div>
+                <!--<div class="game-description">-->
+                    <!--<p><span class="primary-span">Web Tycoon</span> — бесплатная массовая многопользовательская экономическая стратегия, в которой вам предстоит взять на себя роль вебмастера, окунуться в мир веб-технологий и покорить вершины мировой сети.</p>-->
+                    <!--<p>Развивайте сайт, используя все время обновляющиеся технологии. Поддерживайте выбранный вами баланс развития всех составляющих сайта, наполняйте его контентом, не забывайте об его продвижени!</p>-->
+                    <!--<p>Завоевав преимущество - не упускайте его. На прибыль, полученную от созданных сайтов, вы сможете нанять сотрудников, которые будут помогать вам развивать ваш бизнес, или фрилансеров, выполняющих разовые задачи.</p>-->
+                <!--</div>-->
+
+                <!--<div class="video-container">-->
+                    <!--<iframe-->
+                        <!--width="100%"-->
+                        <!--height="auto"-->
+                        <!--src="https://www.youtube.com/embed/iDytJAnsbk0"-->
+                        <!--frameborder="0"-->
+                        <!--allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
+                        <!--allowfullscreen-->
+                    <!--&gt;</iframe>-->
+                <!--</div>-->
             </div>
         </section>
 
@@ -162,7 +196,7 @@
 
             itemNames: [
                 'Зарегистрироваться',
-                'Обзор игры',
+                'Об игре',
                 'Возможности',
                 'Отзывы пользователей',
             ],
@@ -472,7 +506,7 @@
 
     .section-title {
         font-size: 82px;
-        line-height: 80px;
+        line-height: 100px;
         letter-spacing: 2px;
     }
 
@@ -647,6 +681,38 @@
             &:hover {
                 background: #455A64;
             }
+        }
+    }
+
+    .game-description-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 50px;
+
+        .game-description-item {
+            flex-basis: 350px;
+            margin-bottom: 50px;
+        }
+
+        .description-item-title {
+            margin-bottom: 12px;
+            display: flex;
+            font-weight: normal;
+            line-height: 30px;
+
+            i {
+                color: @primary;
+                display: block;
+                margin-right: 12px;
+                font-size: 30px;
+            }
+        }
+
+        .description-item-description {
+            color: #B0BEC5;
+            text-indent: 42px;
+            line-height: 24px;
         }
     }
 </style>
