@@ -14,6 +14,24 @@
                     Зарегистрироваться
                 </button>
 
+                <div class="social-icons-block">
+                    <a href="https://t.me/web_tycoon" target="_blank">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+
+                    <a href="https://vk.com/web_tycoon" target="_blank">
+                        <i class="fab fa-vk"></i>
+                    </a>
+
+                    <a href="https://www.facebook.com/webtycooncom/" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://web-tycoon.com/" target="_blank">
+                        <i class="fas fa-rss"></i>
+                    </a>
+                </div>
+
                 <div class="scroll-downs">
                     <div class="mousey">
                         <div class="scroller"></div>
@@ -605,6 +623,30 @@
     .game-description {
         p {
             margin: 12px 0;
+        }
+    }
+
+    .social-icons-block {
+        display: flex;
+
+        a {
+            color: white;
+            margin: 0 6px;
+            width: 36px;
+            height: 36px;
+            text-align: center;
+            border-radius: 50%;
+            text-decoration: none;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: background-color .3s ease;
+
+            &:hover {
+                background: #455A64;
+            }
         }
     }
 </style>
