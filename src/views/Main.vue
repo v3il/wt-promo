@@ -30,6 +30,10 @@
                     <a href="https://web-tycoon.com/" target="_blank">
                         <i class="fas fa-rss"></i>
                     </a>
+
+                    <a href="https://www.youtube.com/channel/UCsiYSp4H9PrFptMD26tK5Ng" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
                 </div>
 
                 <div class="scroll-downs">
@@ -66,34 +70,17 @@
                     <div class="game-description-item">
                         <h3 class="description-item-title">
                             <i class="material-icons">whatshot</i>
-                            Используйте самые новые технологии</h3>
-                        <p class="description-item-description">Развивайте сайт, используя все время обновляющиеся технологии. Гонка технологий не прекращается никогда. Поддерживайте выбранный вами баланс развития всех составляющих сайта, наполняйте его контентом, не забывайте об его продвижени!</p>
+                            Создавайте и используйте самые новые технологии</h3>
+                        <p class="description-item-description">Развивайте сайт, используя все время обновляющиеся технологии. Поддерживайте выбранный вами баланс развития всех составляющих сайта, наполняйте его контентом, не забывайте об его продвижени!</p>
                     </div>
 
                     <div class="game-description-item">
                         <h3 class="description-item-title">
                             <i class="material-icons">person_add</i>
                             Объединяйтесь и открывайте новые технологии первыми</h3>
-                        <p class="description-item-description">Зарабатывайте на ваших сайтах с помощью продажи рекламных мест, обменивайтесь ссылками, вступайте в кольца сайтов и объединяйтесь в крупные холдинги! Вместе вы станете сильнее, сможете участвовать в конкуренции холдингов, занимать призовые места в регулярных соревнованиях, завоевывая верхние позиции таблицы лучших бизнесменов и сильнейших холдингов. А возможность совместных атак на сайты конкурентов добавит борьбе остроты.</p>
+                        <p class="description-item-description">Зарабатывайте на ваших сайтах с помощью продажи рекламных мест, обменивайтесь ссылками, вступайте в кольца сайтов и объединяйтесь в крупные холдинги!</p>
                     </div>
                 </div>
-
-                <!--<div class="game-description">-->
-                    <!--<p><span class="primary-span">Web Tycoon</span> — бесплатная массовая многопользовательская экономическая стратегия, в которой вам предстоит взять на себя роль вебмастера, окунуться в мир веб-технологий и покорить вершины мировой сети.</p>-->
-                    <!--<p>Развивайте сайт, используя все время обновляющиеся технологии. Поддерживайте выбранный вами баланс развития всех составляющих сайта, наполняйте его контентом, не забывайте об его продвижени!</p>-->
-                    <!--<p>Завоевав преимущество - не упускайте его. На прибыль, полученную от созданных сайтов, вы сможете нанять сотрудников, которые будут помогать вам развивать ваш бизнес, или фрилансеров, выполняющих разовые задачи.</p>-->
-                <!--</div>-->
-
-                <!--<div class="video-container">-->
-                    <!--<iframe-->
-                        <!--width="100%"-->
-                        <!--height="auto"-->
-                        <!--src="https://www.youtube.com/embed/iDytJAnsbk0"-->
-                        <!--frameborder="0"-->
-                        <!--allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"-->
-                        <!--allowfullscreen-->
-                    <!--&gt;</iframe>-->
-                <!--</div>-->
             </div>
         </section>
 
@@ -101,16 +88,29 @@
             <div class="section-content">
                 <h1 class="section-subtitle">Возможности</h1>
 
-                <div class="opportunities-list">
-                    <div class="opportunity" v-for="opportunity in opportunities">
-                        <div class="opportunity-icon">
-                            <i class="material-icons">where_to_vote</i>
-                        </div>
-                        <div class="opportunity-text">
-                            {{opportunity.text}}
+                <div>
+                    <div class="opportunities-list">
+                        <div class="opportunity" v-for="opportunity in opportunities">
+                            <div class="opportunity-icon">
+                                <i class="material-icons">where_to_vote</i>
+                            </div>
+                            <div class="opportunity-text">
+                                {{opportunity.text}}
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <h1 class="section-subtitle">Изображения игры</h1>
+
+                <silentbox-group class="gallery-element">
+                    <silentbox-item
+                            v-for="imageSrc in imagesSrc"
+                            :src="imageSrc"
+                    >
+                        <img :src="imageSrc" class="gallery-item-preview">
+                    </silentbox-item>
+                </silentbox-group>
             </div>
         </section>
 
@@ -118,36 +118,38 @@
             <div class="comments section-content">
                 <h1 class="section-subtitle">Отзывы пользователей</h1>
 
-                <div class="comment comment1">
-                    <div class="user-info">
-                        <div class="comment-avatar"></div>
-                        <div class="comment-name">Анастасия</div>
+                <div class="comments-list">
+                    <div class="comment comment1">
+                        <div class="user-info">
+                            <div class="comment-avatar"></div>
+                            <div class="comment-name">Анастасия</div>
+                        </div>
+                        <div class="comment-text">Отличная игра! Понравилась с первой минуты игры. Очень напоминает любимую игру детства - Sims, только для взрослых :)</div>
                     </div>
-                    <div class="comment-text">Отличная игра! Понравилась с первой минуты игры. Очень напоминает любимую игру детства - Sims, только больше ориентированную на бизнес :)</div>
-                </div>
 
-                <div class="comment comment2">
-                    <div class="user-info">
-                        <div class="comment-avatar"></div>
-                        <div class="comment-name">Кирилл</div>
+                    <div class="comment comment2">
+                        <div class="user-info">
+                            <div class="comment-avatar"></div>
+                            <div class="comment-name">Кирилл</div>
+                        </div>
+                        <div class="comment-text">Всегда мечтал создать собственный Google и вот мне выпала такая возможность! С удовольствием играю здесь каждый день, пока всё очень нравится!</div>
                     </div>
-                    <div class="comment-text">Всегда мечтал создать собственный Google и вот мне выпала такая возможность! С удовольствием играю здесь каждый день, пока всё очень нравится!</div>
-                </div>
 
-                <div class="comment comment3">
-                    <div class="user-info">
-                        <div class="comment-avatar"></div>
-                        <div class="comment-name">Владимир</div>
+                    <div class="comment comment3">
+                        <div class="user-info">
+                            <div class="comment-avatar"></div>
+                            <div class="comment-name">Владимир</div>
+                        </div>
+                        <div class="comment-text">Игра нравится своим реализмом и тем, что не занимает много времени. Всего 60 минут на протяжении дня позволяют мне не терять рейтинг своих проектов и постоянно их развивать</div>
                     </div>
-                    <div class="comment-text">Игра нравится своим реализмом и тем, что не занимает много времени. Всего 30 минут на протяжении дня позволяют мне не терять рейтинг своих проектов и постоянно их развивать</div>
-                </div>
 
-                <div class="comment comment4">
-                    <div class="user-info">
-                        <div class="comment-avatar"></div>
-                        <div class="comment-name">Анна</div>
+                    <div class="comment comment4">
+                        <div class="user-info">
+                            <div class="comment-avatar"></div>
+                            <div class="comment-name">Анна</div>
+                        </div>
+                        <div class="comment-text">Легко достигла 25 уровня и продолжаю играть с большим удовольствием. С нетерпением жду PvP битв и возможности проведения хакерских атак</div>
                     </div>
-                    <div class="comment-text">Легко достигла 25 уровня и продолжаю играть с большим удовольствием. С нетерпением жду PvP битв и возможности проведения хакерских атак</div>
                 </div>
             </div>
         </section>
@@ -156,23 +158,25 @@
             <i class="material-icons">keyboard_arrow_up</i>
         </button>
 
-        <div class="sections-switcher">
-            <div
-                class="switcher-item"
-                v-for="(sectionId, index) in sectionsIds"
-                @click="scrollToSection(sectionId)"
-                :class="{active: index <= currentSectionId}"
-            >
-                <div class="tooltip">{{itemNames[index]}}</div>
-                <div class="switcher-item-inner" :class="{active: index <= currentSectionId}"></div>
-            </div>
-
-            <div class="switcher-scale">
+        <div class="sections-switcher-wrap">
+            <div class="sections-switcher">
                 <div
-                    class="switcher-scale-item"
-                    v-for="(line, lineIndex) in Array(sectionsIds.length - 1)"
-                    :class="{active: lineIndex <= currentSectionId - 1}"
-                ></div>
+                        class="switcher-item"
+                        v-for="(sectionId, index) in sectionsIds"
+                        @click="scrollToSection(sectionId)"
+                        :class="{active: index <= currentSectionId}"
+                >
+                    <div class="tooltip">{{itemNames[index]}}</div>
+                    <div class="switcher-item-inner" :class="{active: index <= currentSectionId}"></div>
+                </div>
+
+                <div class="switcher-scale">
+                    <div
+                            class="switcher-scale-item"
+                            v-for="(line, lineIndex) in Array(sectionsIds.length - 1)"
+                            :class="{active: lineIndex <= currentSectionId - 1}"
+                    ></div>
+                </div>
             </div>
         </div>
     </main>
@@ -182,52 +186,75 @@
     export default {
         name: "Main",
 
-        data: () => ({
-            currentScrollHeight: window.pageY,
+        data() {
+            const images = require.context('../assets/images/screenshots', false);
 
-            currentSectionId: 0,
+            const imagesNames = [
+                '1.jpg',
+                '2.jpg',
+                '5.png',
+                '6.png',
+                '8.png',
+                '9.png',
+                // '16.png',
+            ];
 
-            sectionsIds: [
-                'info',
-                'promo',
-                'pros',
-                'comments',
-            ],
+            const imagesSrc = imagesNames.map((name) => {
+                return images(`./${name}`);
+            });
 
-            itemNames: [
-                'Зарегистрироваться',
-                'Об игре',
-                'Возможности',
-                'Отзывы пользователей',
-            ],
+            return {
+                imagesSrc,
 
-            opportunities: [
-                {
-                    text: 'Участвуйте в истории развития сети Интернет, какой мы знаем ее сейчас',
-                    image: '',
-                },
+                currentScrollHeight: window.pageY,
 
-                {
-                    text: 'Познакомтесь с процессами создания сайта: от идеи и разработки до раскрутки и менеджмента',
-                    image: '',
-                },
+                currentSectionId: 0,
 
-                {
-                    text: 'Воссоздайте сайты, которые популярные сейчас и завоюйте целые сегменты рынка',
-                    image: '',
-                },
+                sectionsIds: [
+                    'info',
+                    'promo',
+                    'pros',
+                    'comments',
+                ],
 
-                {
-                    text: 'Создавайте самые передовые технологии и применяйте их в своих проектах',
-                    image: '',
-                },
+                itemNames: [
+                    'Регистрация',
+                    'Об игре',
+                    'Возможности',
+                    'Отзывы пользователей',
+                ],
 
-                {
-                    text: 'Кооперируйтесь с другими игроками для достижения лучших результатов',
-                    image: '',
-                },
-            ]
-        }),
+                opportunities: [
+                    {
+                        text: 'Участвуйте в истории развития сети Интернет, какой мы знаем ее сейчас',
+                    },
+                    {
+                        text: 'Познакомтесь с процессами создания сайта: от идеи и разработки до раскрутки и менеджмента',
+                    },
+                    {
+                        text: 'Воссоздайте сайты, которые популярные сейчас и завоюйте целые сегменты рынка',
+                    },
+                    {
+                        text: 'Создавайте самые передовые технологии и применяйте их в своих проектах',
+                    },
+                    {
+                        text: 'Кооперируйтесь с другими игроками для достижения лучших результатов',
+                    },
+                    {
+                        text: 'Холдинги с другими игроками. Объединяя усилия, можно создать глобальные прибыльные проекты, которые будут возглавлять рейтинги.',
+                    },
+                    {
+                        text: 'Конкурсы. Побеждает игрок, который создаст самый прибыльный или самый посещаемый сайт за отведенное время.',
+                    },
+                    {
+                        text: 'Хакерские атаки. Можете нанять хакера, чтобы получить доступ к данным конкурента, перенаправить его трафик себе или коварно «положить» его сайт.',
+                    },
+                    {
+                        text: 'Участие в тендерах. Выиграл — получил прибыль в несколько раз больше, чем за обычный проект.',
+                    },
+                ]
+            }
+        },
 
         mounted() {
             window.addEventListener("scroll", this.scrollHandler);
@@ -334,11 +361,31 @@
         align-items: center;
         justify-content: center;
         color: white;
-        transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1), color 1ms;
+        transition: opacity 0.3s cubic-bezier(0.25, 0.8, 0.5, 1), color 1ms;
+        z-index: 3;
+
+        opacity: 0.4;
 
         &:hover {
             background-color: #F57C00;
             cursor: pointer;
+            opacity: 1;
+        }
+
+        @media screen and (max-width: 450px) {
+            bottom: 55px;
+            width: 36px;
+            height: 36px;
+        }
+    }
+
+    .sections-switcher-wrap {
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+            height: 60px;
+            background: #263238;
+            position: fixed;
+            bottom: 0;
         }
     }
 
@@ -354,8 +401,11 @@
         justify-content: space-between;
         flex-direction: column;
 
-        @media screen and (max-width: 800px) {
-            display: none;
+        opacity: 0.4;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 1;
         }
 
         .switcher-item {
@@ -413,6 +463,29 @@
                 background-color: @primary;
             }
         }
+
+        @media screen and (max-width: 1000px) {
+            bottom: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            flex-direction: row;
+            width: 250px;
+            height: auto;
+            top: auto;
+            right: auto;
+
+            .switcher-scale {
+                height: 4px;
+                width: 100%;
+                left: 0;
+                top: 50%;
+                display: flex;
+            }
+
+            .switcher-scale-item {
+                height: 100%;
+            }
+        }
     }
 
     .tooltip {
@@ -440,6 +513,10 @@
             left: 100%;
             top: 50%;
             transform: translateY(-50%);
+        }
+
+        @media screen and (max-width: 1000px) {
+            display: none !important;
         }
     }
 
@@ -495,13 +572,14 @@
     }
 
     .section-content {
-        max-width: 700px;
-        padding: 24px;
+        max-width: 900px;
+        padding: 18px;
         width: 100%;
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     .section-title {
@@ -513,12 +591,15 @@
     .section-description {
         font-size: 20px;
         margin: 12px 0;
+        color: #B0BEC5;
+        line-height: 30px;
     }
 
     .video-container-wrap {
         width: 100%;
-        max-width: 800px;
+        max-width: 900px;
         margin: 0 auto;
+        padding: 0 18px;
     }
 
     .video-container {
@@ -538,39 +619,37 @@
         height:100%;
     }
 
-    .comment {
-        max-width: 80%;
+    .comments-list {
+        max-width: 900px;
         width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @media screen and (max-width: 800px) {
+            justify-content: center;
+        }
+    }
+
+    .comment {
+        flex-basis: 370px;
 
         margin-top: 24px;
-        margin-bottom: 24px;
+        margin-bottom: 18px;
 
         padding: 6px 18px;
 
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
+        justify-content: center;
 
         @media screen and (max-width: 800px) {
             max-width: 100%;
             justify-content: center;
-        }
-
-        &.comment1, &.comment3 {
-            margin-right: auto;
-        }
-
-        &.comment2, &.comment4 {
-            margin-left: auto;
-            flex-direction: row-reverse;
-        }
-
-        &.comment1 .user-info, &.comment3 .user-info {
-            margin-right: 18px;
-        }
-
-        &.comment2 .user-info, &.comment4 .user-info {
-            margin-left: 18px;
+            padding-left: 0;
+            padding-right: 0;
         }
 
         &.comment1 .comment-avatar {
@@ -583,7 +662,7 @@
 
         &.comment3 .comment-avatar {
             background: url("../assets/images/ava4.jpg");
-            background-position-x: 120px;
+            background-position-x: 210px;
         }
 
         &.comment4 .comment-avatar {
@@ -600,36 +679,43 @@
     }
 
     .comment-avatar {
-        width: 84px;
-        flex-basis: 84px;
-        height: 84px;
+        width: 150px;
+        flex-basis: 150px;
+        height: 150px;
         border-radius: 50%;
         background-size: cover !important;
         background-repeat: no-repeat;
         margin-bottom: 12px;
+        border: 3px solid @primary;
     }
 
     .comment-text {
-        background: #fafafa;
-        border-radius: 4px;
-        color: #212121;
         padding: 12px;
-        flex: 1;
         min-width: 250px;
+        color: #B0BEC5;
+        text-align: center;
+        line-height: 30px;
     }
 
-    &.comment1 .comment-text, &.comment3 .comment-text {
-        border-radius: 12px 24px;
-    }
-
-    &.comment2 .comment-text, &.comment4 .comment-text {
-        border-radius: 24px 12px;
+    .comment-name {
+        font-size: 24px;
+        margin-top: 12px;
+        margin-bottom: 12px;
     }
 
     .section-subtitle {
         color: @primary;
         font-size: 30px;
+        margin-bottom: 30px;
         text-align: center;
+
+        @media screen and (max-width: 800px) {
+            margin-bottom: 12px;
+        }
+    }
+
+    .opportunities-list {
+        margin-bottom: 40px;
     }
 
     .opportunity {
@@ -637,6 +723,12 @@
         align-items: center;
         margin: 18px 0;
         font-size: 20px;
+    }
+
+    .opportunity-text {
+        line-height: 30px;
+        text-align: left;
+        color: #B0BEC5;
     }
 
     .opportunity-icon {
@@ -688,31 +780,75 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-top: 50px;
+        /*margin-top: 50px;*/
 
         .game-description-item {
-            flex-basis: 350px;
-            margin-bottom: 50px;
+            flex-basis: 370px;
+            margin-bottom: 18px;
+            margin-top: 24px;
+            padding: 6px 12px;
         }
 
         .description-item-title {
             margin-bottom: 12px;
             display: flex;
+            align-items: center;
             font-weight: normal;
             line-height: 30px;
 
             i {
                 color: @primary;
                 display: block;
-                margin-right: 12px;
-                font-size: 30px;
+                margin-right: 18px;
+                font-size: 36px;
             }
         }
 
         .description-item-description {
             color: #B0BEC5;
-            text-indent: 42px;
-            line-height: 24px;
+            text-indent: 54px;
+            line-height: 30px;
         }
+
+        @media screen and (max-width: 800px) {
+            justify-content: center;
+
+            .description-item-description {
+                text-indent: 0;
+                text-align: center;
+            }
+
+            .description-item-title {
+                flex-direction: column;
+                text-align: center;
+
+                i {
+                    margin-right: 0;
+                    margin-bottom: 12px;
+                }
+            }
+        }
+    }
+
+    .gallery-element {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .silentbox-item {
+        margin: 6px 12px;
+        border: 2px solid @primary;
+        border-radius: 6px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+
+    .gallery-item-preview {
+        width: 100px;
+        height: 70px;
+        object-fit: cover;
+        object-position: center;
     }
 </style>
