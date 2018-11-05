@@ -44,6 +44,28 @@
             </div>
         </section>
 
+        <section class="page-section js-page-section" id="pros">
+            <div class="section-content jcr">
+                <div class="main-page">
+
+                    <div class="overlay1"></div>
+                    <div class="overlay2"></div>
+
+                    <div class="main-page-info">
+                        <div>
+                            <h3 class="page-info-title">
+                                Web Tycoon
+                            </h3>
+
+                            <p class="page-info-description">
+                                Бесплатная массовая многопользовательская экономическая стратегия, в которой вам предстоит взять на себя роль вебмастера, окунуться в мир веб-технологий и покорить вершины мировой сети.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="page-section js-page-section" id="promo">
             <div class="video-container-wrap">
                 <h1 class="section-subtitle">Об игре</h1>
@@ -84,36 +106,6 @@
             </div>
         </section>
 
-        <section class="page-section js-page-section" id="pros">
-            <div class="section-content">
-                <h1 class="section-subtitle">Возможности</h1>
-
-                <div>
-                    <div class="opportunities-list">
-                        <div class="opportunity" v-for="opportunity in opportunities">
-                            <div class="opportunity-icon">
-                                <i class="material-icons">where_to_vote</i>
-                            </div>
-                            <div class="opportunity-text">
-                                {{opportunity.text}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h1 class="section-subtitle">Изображения игры</h1>
-
-                <silentbox-group class="gallery-element">
-                    <silentbox-item
-                            v-for="imageSrc in imagesSrc"
-                            :src="imageSrc"
-                    >
-                        <img :src="imageSrc" class="gallery-item-preview">
-                    </silentbox-item>
-                </silentbox-group>
-            </div>
-        </section>
-
         <section class="page-section js-page-section" id="comments">
             <div class="comments section-content">
                 <h1 class="section-subtitle">Отзывы пользователей</h1>
@@ -148,7 +140,7 @@
                             <div class="comment-avatar"></div>
                             <div class="comment-name">Анна</div>
                         </div>
-                        <div class="comment-text">Легко достигла 25 уровня и продолжаю играть с большим удовольствием. С нетерпением жду PvP битв и возможности проведения хакерских атак</div>
+                        <div class="comment-text">Легко достигла 15-го уровня и продолжаю играть с большим удовольствием. С нетерпением жду PvP битв и возможности проведения хакерских атак</div>
                     </div>
                 </div>
             </div>
@@ -161,10 +153,10 @@
         <div class="sections-switcher-wrap">
             <div class="sections-switcher">
                 <div
-                        class="switcher-item"
-                        v-for="(sectionId, index) in sectionsIds"
-                        @click="scrollToSection(sectionId)"
-                        :class="{active: index <= currentSectionId}"
+                    class="switcher-item"
+                    v-for="(sectionId, index) in sectionsIds"
+                    @click="scrollToSection(sectionId)"
+                    :class="{active: index <= currentSectionId}"
                 >
                     <div class="tooltip">{{itemNames[index]}}</div>
                     <div class="switcher-item-inner" :class="{active: index <= currentSectionId}"></div>
@@ -172,9 +164,9 @@
 
                 <div class="switcher-scale">
                     <div
-                            class="switcher-scale-item"
-                            v-for="(line, lineIndex) in Array(sectionsIds.length - 1)"
-                            :class="{active: lineIndex <= currentSectionId - 1}"
+                        class="switcher-scale-item"
+                        v-for="(line, lineIndex) in Array(sectionsIds.length - 1)"
+                        :class="{active: lineIndex <= currentSectionId - 1}"
                     ></div>
                 </div>
             </div>
@@ -187,72 +179,24 @@
         name: "Main",
 
         data() {
-            const images = require.context('../assets/images/screenshots', false);
-
-            const imagesNames = [
-                '1.jpg',
-                '2.jpg',
-                '5.png',
-                '6.png',
-                '8.png',
-                '9.png',
-                // '16.png',
-            ];
-
-            const imagesSrc = imagesNames.map((name) => {
-                return images(`./${name}`);
-            });
-
             return {
-                imagesSrc,
-
                 currentScrollHeight: window.pageY,
 
                 currentSectionId: 0,
 
                 sectionsIds: [
                     'info',
-                    'promo',
                     'pros',
+                    'promo',
                     'comments',
                 ],
 
                 itemNames: [
                     'Регистрация',
-                    'Об игре',
                     'Возможности',
+                    'Об игре',
                     'Отзывы пользователей',
                 ],
-
-                opportunities: [
-                    {
-                        text: 'Участвуйте в истории развития сети Интернет, какой мы знаем ее сейчас',
-                    },
-                    {
-                        text: 'Познакомтесь с процессами создания сайта: от идеи и разработки до раскрутки и менеджмента',
-                    },
-                    {
-                        text: 'Воссоздайте сайты, которые популярные сейчас и завоюйте целые сегменты рынка',
-                    },
-                    {
-                        text: 'Создавайте самые передовые технологии и применяйте их в своих проектах',
-                    },
-                    {
-                        text: 'Кооперируйтесь с другими игроками для достижения лучших результатов',
-                    },
-                    {
-                        text: 'Холдинги с другими игроками. Объединяя усилия, можно создать глобальные прибыльные проекты, которые будут возглавлять рейтинги.',
-                    },
-                    {
-                        text: 'Конкурсы. Побеждает игрок, который создаст самый прибыльный или самый посещаемый сайт за отведенное время.',
-                    },
-                    {
-                        text: 'Хакерские атаки. Можете нанять хакера, чтобы получить доступ к данным конкурента, перенаправить его трафик себе или коварно «положить» его сайт.',
-                    },
-                    {
-                        text: 'Участие в тендерах. Выиграл — получил прибыль в несколько раз больше, чем за обычный проект.',
-                    },
-                ]
             }
         },
 
@@ -343,6 +287,8 @@
         align-items: center;
         justify-content: center;
         padding: 24px 0;
+        position: relative;
+        overflow: hidden;
         box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
     }
 
@@ -362,7 +308,7 @@
         justify-content: center;
         color: white;
         transition: opacity 0.3s cubic-bezier(0.25, 0.8, 0.5, 1), color 1ms;
-        z-index: 3;
+        z-index: 11;
 
         opacity: 0.4;
 
@@ -386,6 +332,7 @@
             background: #263238;
             position: fixed;
             bottom: 0;
+            z-index: 10;
         }
     }
 
@@ -400,6 +347,7 @@
         align-items: center;
         justify-content: space-between;
         flex-direction: column;
+        z-index: 10;
 
         opacity: 0.4;
         transition: opacity 0.3s ease;
@@ -500,6 +448,7 @@
         width: auto;
         color: #212121;
         white-space: nowrap;
+        z-index: 10;
 
         &:after {
             content: "";
@@ -850,5 +799,72 @@
         height: 70px;
         object-fit: cover;
         object-position: center;
+    }
+
+    .overlay1 {
+        max-width: 1500px;
+        width: 98%;
+        height: 95%;
+        border-radius: ~'28% 72% 70% 30% / 15% 50% 50% 85%';
+        background: #37474F;
+        position: absolute;
+        top: -100px;
+        left: -100px;
+        z-index: 3;
+
+        @media screen and (max-width: 1000px) {
+            left: -10px;
+        }
+
+        @media screen and (max-width: 500px) {
+            left: -30px;
+            width: 136%;
+            height: 93%;
+        }
+    }
+
+    .overlay2 {
+        max-width: 1520px;
+        width: 100%;
+        height: 92%;
+        border-radius: ~'39% 61% 53% 47% / 25% 48% 52% 75%';
+        background: @primary;
+        position: absolute;
+        top: -100px;
+        left: -100px;
+        z-index: 2;
+
+        @media screen and (max-width: 1000px) {
+            left: -50px;
+            width: 106%;
+        }
+
+        @media screen and (max-width: 450px) {
+            width: 122%;
+        }
+    }
+
+    .main-page-info {
+        z-index: 6;
+        position: relative;
+        /*text-align: left;*/
+        max-width: 500px;
+    }
+
+    .page-info-description {
+        font-size: 20px;
+        margin: 12px 0;
+        color: #B0BEC5;
+        line-height: 30px;
+    }
+
+    .page-info-title {
+        font-size: 82px;
+        line-height: 100px;
+        letter-spacing: 2px;
+    }
+
+    #info {
+        z-index: 10;
     }
 </style>
