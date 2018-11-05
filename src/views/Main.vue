@@ -60,6 +60,17 @@
                             <p class="page-info-description">
                                 Бесплатная массовая многопользовательская экономическая стратегия, в которой вам предстоит взять на себя роль вебмастера, окунуться в мир веб-технологий и покорить вершины мировой сети.
                             </p>
+
+                            <div class="video-container">
+                                <iframe
+                                        width="100%"
+                                        height="auto"
+                                        src="https://www.youtube.com/embed/iDytJAnsbk0"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen
+                                ></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -557,7 +568,9 @@
         padding-top:30px;
         height:0;
         overflow:hidden;
-        margin-top: 18px;
+        margin-top: 30px;
+        margin-bottom: 100px;
+        border-radius: 6px;
     }
 
     .video-container iframe, .video-container object, .video-container embed {
